@@ -117,7 +117,18 @@ class PredisParametersFactoryTest extends TestCase
                     'persistent' => true,
                     'database' => 0
                 ]
-            ]
+            ],
+            [
+                'redis://localhost/0',
+                'Predis\Connection\Parameters',
+                [
+                    'parameters' => ['password' => 'pw'],
+                ],
+                [
+                    'database' => 0,
+                    'password' => 'pw',
+                ],
+            ],
         );
     }
 

@@ -34,6 +34,14 @@ class PredisParametersFactory
             $dsnOptions['persistent'] = (int)$dsnOptions['database'];
         }
 
+        if (
+            !isset($dsnOptions['password'])
+            && !isset($dsnOptions['replication'])
+            && isset($dsnOptions['parameters']['password'])
+        ) {
+            $dsnOptions['password'] = $dsnOptions['parameters']['password'];
+        }
+
         return new $class($dsnOptions);
     }
 
