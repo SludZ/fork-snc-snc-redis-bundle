@@ -1,5 +1,9 @@
 # Change Log
 
+## [3.2.4] (2024-07-01)
+
+- Fix specifying password via options instead of DSN to work with cluster setups
+
 ## [3.2.3](https://github.com/snc/SncRedisBundle/tree/3.2.3) (2020-06-05)
 [Full Changelog](https://github.com/snc/SncRedisBundle/compare/3.2.2...3.2.3)
 
